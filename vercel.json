@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/telegram",
+      "destination": "https://t.me/+c9qkP1Xtufs1Y2Ix",
+      "permanent": false
+    },
+    {
+      "source": "/whatsapp",
+      "destination": "https://chat.whatsapp.com/HNWpElHsQB1FxcERnz3ALx",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok",
+      "destination": "https://www.tiktok.com/@portalgume",
+      "permanent": false
+    },
+    {
+      "source": "/loja",
+      "destination": "https://shopee.com.br/portalgume",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
